@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>  <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost/Project/register_code.css">
+<script type="text/javascript">    
+
+function validate(){
+       var namef=document.form1.name1;
+       var emailf=document.form1.email;
+       var genderf=document.form1.gender;
+       var genderf2=document.getElementById("gender");
+       var dobf=document.form1.dob;
+       var relf=document.form1.religion;
+       var relf2=document.getElementById("religion");
+       var castef=document.form1.caste;
+       var castef2=document.getElementById("caste");
+       var fnamef=document.form1.fname;
+       var focupf=document.form1.foccup;
+       var mnamef=document.form1.mname;
+       var mocupf=document.form1.moccup;
+       var qualiff=document.form1.d1;
+       var qualiff=document.form1.d2;
+       var qualiff=document.form1.d3;
+       var qualiff=document.form1.d4;
+       var addressf=document.form1.address;
+       var numf=document.form1.number;
+       var degreef=document.form1.degree;
+       var degreef2=document.getElementById("degree");
+       var langf=document.form1.c1;
+       var langf=document.form1.c1;
+       var langf=document.form1.c1;
+       var langf=document.form1.c1;        
+    
+            if (namef.value.length <= 0) {    
+                alert("Name is required");    
+                namef.focus();    
+                return false;    
+            }
+            if (emailf.value.length <= 0) {    
+                alert("Email Id is required");    
+                emailf.focus();    
+                return false;    
+            }
+            if (genderf.value.length <= 0) {    
+                genderf2.focus();
+                alert("Gender is required");   
+                return false;    
+            }       
+            
+            if (dobf.value.length <= 0) {    
+                alert("D.O.B number is required");    
+                dobf.focus();    
+                return false;    
+            }     
+                
+            if (relf.value.length <= 0) {    
+                alert("Religion is required");    
+                relf2.focus();    
+                return false;    
+            }
+            if (castef.value.length <= 0) {    
+                alert("Caste number is required");    
+                castef2.focus();    
+                return false;    
+            }
+            if (fnamef.value.length <= 0) {    
+                alert("Father's Name number is required");    
+                fnamef.focus();    
+                return false;    
+            }
+            if (focupf.value.length <= 0) {    
+                alert("Father's Occupation number is required");    
+                focupf.focus();    
+                return false;    
+            }
+            if (mnamef.value.length <= 0) {    
+                alert("Mother's Name is required");    
+                mnamef.focus();    
+                return false;    
+            }
+            if (mocupf.value.length <= 0) {    
+                alert("Mother's Occupation number is required");    
+                mocupf.focus();    
+                return false;    
+            }
+            if (addressf.value.length <= 0) {    
+                alert("Address is required");    
+                addressf.focus();    
+                return false;    
+            }
+            if (numf.value.length <= 0) {    
+                alert("Mobile number is required");    
+                numf.focus();    
+                return false;    
+            }
+            if (degreef.value.length <= 0) {    
+                alert("Mobile number is required");    
+                degreef2.focus();    
+                return false;    
+            }
+
+            var uniqueidf=document.form1.uniqueid;
+            var uid= Math.random().toString(36).substr(2, 9);
+            uniqueidf.value=namef.value.substr(3,3 )+uid;
+            
+            
+
+                
+}
+       
+</script>
+</head>
+<body style="background-color:EFEFEF">
+   <div> <h1>
+          Fejvoks<br>
+         Conference<span>June3-June5,Chicago,U.S</span></h1></div>
+         
+
+<center><form name="form1" action="submitdata.php" method="post" onsubmit="return validate()">
+<h2   style="border: ridge; width: 100%;text-align: center; ">REGISTRATION</h2><br>
+<table border="1">
+    
+<tr><td align="right"><b>Name                :</b></td><td><input type="text" name="name1"></td></tr>
+<tr><td align="right"><b>E-mail              :</b></td><td><input type="email" name="email"></td></tr>
+<tr><td align="right"><b>Gender              :</b></td><td><input type="radio" id="gender" name="gender" value="male">male<input type="radio" id="gender" name="gender" value="female">female</td></tr>
+<tr><td align="right"><b>Date Of Birth       :</b></td><td><input type="date" name="dob"></td></tr>
+<tr><td align="right"><b>Religion            :</b></td><td><input type="radio" id="religion" name="religion" value="Christian">Christian<input type="radio" name="religion" value="Hindu">Hindu<input type="radio" name="religion" value="Muslim">Muslim</td></tr>
+<tr><td align="right"><b>Caste               :</b></td><td><input type="radio" id="caste" name="caste" value="OC">OC<input type="radio" name="caste" value="BC">BC<input type="radio" name="caste" value="SC">SC<input type="radio" name="caste" value="Others">Others</td></tr>
+<tr><td align="right"><b>Father's Name       :</b></td><td><input type="text" name="fname"></td></tr>
+<tr><td align="right"><b>Father's Occupation :</b></td><td><input type="text" name="foccup"></td></tr>
+<tr><td align="right"><b>Mother's Name       :</b></td><td><input type="text" name="mname"></td></tr>
+<tr><td align="right"><b>Mother's Occupation :</b></td><td><input type="text" name="moccup" ></td></tr>
+<tr><td align="right"><b>Qualifications      :</b></td><td><input type="checkbox" name="qualif[]" id="d1" value="HSC">HSC<input type="checkbox" name="qualif[]" id="d2" value="Diplomo">Diplomo<input type="checkbox" name="qualif[]" id="d3" value="UG">UG<input type="checkbox" name="qualif[]" id="d4" value="PG">PG</td></tr>
+<tr><td align="right"><b>Address             :</b></td><td><textarea rows="5" name="address"></textarea></td></tr>
+       
+<tr><td align="right"><b>Contact number      :</b></td><td><input type="number" name="number"></td></tr>
+<tr><td align="right"><b>Degree              :</td><td></b><input type="radio" id="degree" name="degree" value="B.E.">B.E.<input type="radio" name="degree" value="M.E.">M.E.<input type="radio" name="degree" value="B.Ed">B.Ed<input type="radio" name="degree" value="M.Ed">M.Ed<input type="radio" name="degree" value="Ph.d">Ph.d</td></tr>				  
+<tr><td align="right"><b>Known programming 
+    languages    : </td><td></b><input type="checkbox" id="c1" value="HTML" name="lang[]">HTML    <input type="checkbox" name="lang[]" value="CSS" id="c2">CSS     
+<input type="checkbox" name="lang[]" id="c3" value="PHP">PHP     <input type="checkbox" name="lang[]" id="c4"value="jQuery">jQuery</td></tr>    
+<!-- unique Id-->     <input type="hidden" name="uniqueid" id="uniqueid">           
+               
+<tr><td colspan="2" align="center"><b><input style="height:50px;width:100px;background-color:#efc9af;" type="submit" name="submit" value="Register"></b></td></tr>    
+    </table></form></center><br>
+    
+</div>
+</pre style="font-color:rgb(81, 28, 88)"><center>© Fejvoks Conferences</font></center>
+</body>
+</html>
